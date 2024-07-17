@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="de" id="top">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Parallax Effect with JS</title>
+    <meta name="description" content="Beschreibung für diese Website">
+
+    <link href="css/parallaxstyle.css" rel="stylesheet">
+
+<!-- COPYRIGHT: ALL PICTURES FROM pixabay.com -->
+
+</head>
+
+<body>
+
+    <section>
+        <img src="images/room.png" id="room">
+        <img src="images/city.png" id="city">
+        <img src="images/woman.png" id="woman">
+        <h2 id="text">Neon City</h2>
+    </section>
+
+    <script type="text/javascript">
+        let room = document.getElementById("city");
+        let city = document.getElementById("room");
+        let woman = document.getElementById("woman");
+        let text = document.getElementById("text");
+        
+        window.addEventListener('scroll', function(){
+            var value = window.scrollY;
+            
+            room.style.top = value * 0.5 + 'px';
+            woman.style.left = value * 0.5 + 'px';
+            city.style.top = value * 0.15 + 'px';
+            text.style.top = value * 1 + 'px';
+        })
+
+    </script>
+
+
+
+</body>
+
+</html>
